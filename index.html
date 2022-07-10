@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator test</title>
+
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <form class="form" action="">
+      <p>宿泊人数</p>
+      <p>大人</p>
+      <input type="number" name="adultspeson" value="1" min="1" max="20" />
+
+      <p>子供</p>
+      <input type="number" name="childspeson" name="a" value="0" min="0" max="20" />
+  
+      <p>平日・休日</p>
+      <input type="radio" name="date" value="平日" data-price="16500" checked/> 平日
+      <input type="radio" name="date" value="休日" data-price="33000" /> 休日
+      <input type="radio" name="date" value="特定日" data-price="44000" /> 特定日
+  
+      <p>宿泊スタイル・宿泊人数</p>
+      <p>コテージ利用</p>
+      <input type="radio" name="cottage" value="利用しない" data-price="0" checked/> 利用しない
+      <input type="radio" name="cottage" value="1人" data-price="23100" /> 1人
+      <input type="radio" name="cottage" value="2人" data-price="26400" /> 2人
+      <input type="radio" name="cottage" value="3人" data-price="29700" /> 3人
+      <input type="radio" name="cottage" value="4人" data-price="35200" /> 4人
+
+
+      <p>手ぶらでキャンプ</p>
+      <p>大人</p>
+      <input type="number" name="emptycampadultspeson" value="0" min="0" max="20" />
+      <p>子供</p>
+      <input type="number" name="emptycampchildspeson" value="0" min="0" max="20" />
+      
+      <p>持ち込みキャンプ</p>
+      <p>大人</p>
+      <input type="number" name="bringcampadultspeson" value="0" min="0" max="20" />
+      <p>子供</p>
+      <input type="number" name="bringcampchildspeson" value="0" min="0" max="20" />
+      
+      
+      <div>
+        <p>お食事オプション</p>
+        <input type="radio" name="food" value="利用しない" data-adaltsprice="0" data-childsprice="0" checked/> なし
+        <input type="radio" name="food" value="夕食のみ(BBQ)" data-adaltsprice="3850" data-childsprice="2750" /> 夕食のみ(BBQ)
+        <input type="radio" name="food" value="朝食のみ" data-adaltsprice="1100" data-childsprice="880" /> 朝食のみ
+        <input type="radio" name="food" value="3人" data-adaltsprice="4950" data-childsprice="3630" /> 夕食(BBQ)・朝食付き
+      </div>
+  
+      <button type="button" value="合計金額を見る" onclick="calculate()">合計金額を見る</button>
+      
+      <p>合計金額</p>
+      <input id="totalAmount" type="text" name="totalAmount" value="0" size="5" readonly />
+    </form>
+  </body>
+
+  <script src="./script.js"></script>
+</html>
